@@ -150,7 +150,13 @@ button:focus, article:focus {
 
 /* Simula a foto de fundo escura, você pode trocar por um gradiente ou imagem se quiser */
 .card-background {
-    position: absolute; inset: 0; background: linear-gradient(180deg, #333 0%, #111 100%); z-index: 1;
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/gi.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    z-index: 1;
 }
 
 /* Gradiente na base para o texto ficar legível */
