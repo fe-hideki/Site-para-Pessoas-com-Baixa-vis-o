@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AudioMatch - Acessível e Inclusivo</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div id="start-overlay" class="overlay">
+        <button id="btn-start" aria-label="Iniciar aplicativo. Pressione Enter ou Espaço.">
+            Iniciar AudioMatch
+        </button>
+    </div>
+
+    <div class="app-container" aria-hidden="true" id="main-app">
+        
+        <aside class="sidebar" aria-label="Navegação principal">
+            <header class="sidebar-header">
+                <div class="profile-avatar" aria-label="Seu perfil" tabindex="0"></div>
+                <div class="header-icons">
+                </div>
+            </header>
+
+            <nav class="sidebar-tabs">
+                <button class="nav-tab active" aria-current="page">Matches</button>
+                <button class="nav-tab">Mensagens</button>
+            </nav>
+
+            <div class="sidebar-content" aria-live="polite">
+                <div class="empty-state-card"></div>
+                <h2>Comece a dar Matches</h2>
+                <p>Os Matches aparecerão aqui quando você começar a curtir pessoas. Você pode enviar mensagens para seus Matches diretamente daqui quando estiver pronto para iniciar uma conversa.</p>
+            </div>
+        </aside>
+
+        <main class="discover-section" aria-label="Descoberta de novos perfis">
+            
+            <div class="card-container">
+                <article class="profile-card" tabindex="0" id="current-profile">
+                    <div class="card-background"></div>
+                    
+                    <div class="profile-info">
+                        <div class="online-status">
+                            <span class="dot"></span> Online recentemente
+                        </div>
+                        <h1 id="profile-name">Gi <span>19</span> <span class="verified" aria-label="Perfil verificado">✓</span></h1>
+                        <p id="profile-distance">📍 a 11 quilômetros daqui</p>
+                        <button id="btn-info" class="info-btn" aria-label="Abrir perfil completo">i</button>
+                    </div>
+                </article>
+
+                <div class="actions" role="group" aria-label="Ações de Match">
+                    <button id="btn-undo" class="action-btn small" aria-label="Desfazer">↺</button>
+                    <button id="btn-pass" class="action-btn large btn-pass" aria-label="Passar">❌</button>
+                    <button id="btn-super" class="action-btn small btn-super" aria-label="Super Like">⭐</button>
+                    <button id="btn-like" class="action-btn large btn-like" aria-label="Curtir">💚</button>
+                    <button id="btn-boost" class="action-btn small btn-boost" aria-label="Boost">⚡</button>
+                </div>
+            </div>
+
+            <footer class="shortcuts-bar" aria-hidden="true">
+                <span><kbd>←</kbd> Não</span>
+                <span><kbd>→</kbd> Curtir</span>
+                <span><kbd>↑</kbd> Abrir perfil</span>
+                <span><kbd>↓</kbd> Fechar perfil</span>
+                <span><kbd>V</kbd> Voltar</span>
+                <span><kbd>I</kbd> Info</span>
+                <span><kbd>B</kbd> Boost</span>
+                <span><kbd>Enter</kbd> Super Like</span>
+                <span><kbd>Espaço</kbd> Próxima foto</span>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
