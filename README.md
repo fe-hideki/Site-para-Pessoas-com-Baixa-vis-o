@@ -1,7 +1,7 @@
 # 🎵 AudioMatch
 O AudioMatch é um projeto de plataforma de relacionamentos desenvolvido exclusivamente para pessoas com baixa visão. O objetivo é eliminar as barreiras de interfaces puramente visuais, transformando a experiência de "dar match" em algo auditivo e de alto contraste.
 
-##🛠️ Por que essas funcionalidades são importantes?
+## 🛠️ Por que essas funcionalidades são importantes?
 Pessoas com baixa visão enfrentam desafios como sensibilidade à luz (fotofobia), perda de visão periférica ou dificuldade em enxergar detalhes e textos pequenos. Algumas das soluções que encontrei:
 
 ### 1. Contraste Extremo e Fundo Preto
