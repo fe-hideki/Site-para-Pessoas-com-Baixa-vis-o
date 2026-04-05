@@ -1,10 +1,10 @@
-/* Variáveis de Cor (Tema Escuro do Tinder) */
+
 :root {
     --bg-main: #000000;
     --bg-sidebar: #111418;
     --text-primary: #ffffff;
-    --text-secondary: #ffffff; /* Cinza azulado para textos menores */
-    --gradient-primary: linear-gradient(90deg, #fd297b 0%, #ff655b 100%);
+    --text-secondary: #ffffff; 
+    --gradient-primary: linear-gradient(90deg, #292dfd 0%, #5bd9ff 100%);
     
     /* Cores das ações */
     --color-pass: #fd5068;
@@ -14,7 +14,7 @@
     --color-boost: #b148fb;
     
     /* Foco acessível com a cor da marca */
-    --focus-ring: #fd297b; 
+    --focus-ring: #21cbff; 
 }
 
 .sr-only {
@@ -33,25 +33,25 @@ body {
 
 /* ================= FEEDBACK VISUAL DE FOCO ================= */
 
-/* Regra para botões circulares (Ações, Ícones e Info) */
+
 .action-btn:focus, 
 .icon-btn:focus, 
 .info-btn:focus,
 #btn-start:focus {
     outline: 3px solid var(--focus-ring);
     outline-offset: 2px;
-    border-radius: 50%; /* Garante o círculo perfeito */
+    border-radius: 50%; 
     transition: outline 0.1s ease;
 }
 
-/* Regra específica para o Card (que é retangular) */
+
 .profile-card:focus {
     outline: 3px solid var(--focus-ring);
     outline-offset: 2px;
-    border-radius: 12px; /* Mantém o arredondado do card */
+    border-radius: 12px; 
 }
 
-/* Remove o contorno padrão azul feio do navegador */
+
 button:focus, article:focus {
     outline: none;
 }
@@ -73,8 +73,8 @@ button:focus, article:focus {
 
 /* ================= SIDEBAR ================= */
 .sidebar {
-    width: 100%;             /* Adicionado */
-    max-width: 375px;        /* Alterado de width para max-width */
+    width: 100%;            
+    max-width: 375px;       
     background-color: var(--bg-sidebar);
     display: flex;
     flex-direction: column;
@@ -100,14 +100,63 @@ button:focus, article:focus {
 }
 
 .sidebar-tabs {
-    display: flex; padding: 15px 20px 0; gap: 20px; font-weight: 600; font-size: 0.95rem;
+    display: flex;
+    padding: 20px 20px 0;
+    gap: 25px;
+    background-color: var(--bg-sidebar); 
 }
 
 .nav-tab {
-    background: none; border: none; color: var(--text-secondary); cursor: pointer; padding-bottom: 10px; font-weight: bold;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding-bottom: 12px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    transition: color 0.3s ease;
 }
+
 .nav-tab.active {
-    color: var(--text-primary); border-bottom: 3px solid #fd297b;
+    color: var(--text-primary);
+}
+
+.nav-tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 10px 10px 0 0;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.match-color {
+    background-color: var(--color-pass); 
+    box-shadow: 0 0 8px var(--color-pass);
+}
+
+.message-color {
+    background-color: var(--color-pass);
+    box-shadow: 0 0 8px var(--color-pass);
+}
+
+.nav-tab:not(.active) .status-indicator {
+    opacity: 2;
+    filter: grayscale(0.5);
+    box-shadow: none;
 }
 
 .sidebar-content {
@@ -115,7 +164,7 @@ button:focus, article:focus {
 }
 
 .empty-state-card {
-    width: 120px; height: 160px; background: var(--gradient-primary); border-radius: 12px; margin-bottom: 20px; box-shadow: 0 10px 20px rgba(253, 41, 123, 0.2);
+    width: 120px; height: 160px; background: var(--gradient-primary); border-radius: 12px; margin-bottom: 20px; box-shadow: 0 10px 20px rgba(55, 41, 253, 0.2);
 }
 
 .sidebar-content h2 { font-size: 1.3rem; margin-bottom: 10px; }
@@ -132,10 +181,10 @@ button:focus, article:focus {
 
 /* ================= PROFILE CARD ================= */
 .profile-card {
-    width: 100%;             /* Adicionado */
-    max-width: 375px;        /* Alterado de width para max-width */
-    height: 100vh;            /* Altura flexível baseada na tela */
-    max-height: 450px;       /* Não deixa passar da altura que você gostou */
+    width: 100%;             
+    max-width: 375px;        
+    height: 100vh;            
+    max-height: 450px;      
     background-color: #1a1a1a;
     border-radius: 12px;
     position: relative;
@@ -148,7 +197,6 @@ button:focus, article:focus {
     transition: transform 0.1s, box-shadow 0.3s;
 }
 
-/* Simula a foto de fundo escura, você pode trocar por um gradiente ou imagem se quiser */
 .card-background {
     position: absolute;
     inset: 0;
@@ -159,7 +207,6 @@ button:focus, article:focus {
     z-index: 1;
 }
 
-/* Gradiente na base para o texto ficar legível */
 .profile-info {
     position: relative; z-index: 2; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%); width: 100%; box-sizing: border-box;
 }
@@ -221,29 +268,67 @@ kbd {
     border: 1px solid #555; border-radius: 4px; padding: 2px 6px; margin-right: 5px; background: #222; font-family: sans-serif;
 }
 
+/* ================= SIDEBAR LIST (MATCHES/MENSAGENS) ================= */
+.sidebar-list {
+    list-style: none; padding: 0; margin: 0; width: 100%; text-align: left;
+}
+.sidebar-list-item {
+    display: flex; align-items: center; padding: 15px 0; border-bottom: 1px solid #333; cursor: pointer; transition: background 0.2s;
+}
+.sidebar-list-item:focus {
+    background: #1a1a1a; outline: 2px solid var(--focus-ring); border-radius: 8px;
+}
+.item-avatar {
+    width: 50px; height: 50px; border-radius: 50%; background-size: cover; background-position: center; margin-right: 15px; background-color: #333;
+}
+.item-info { flex: 1; }
+.item-info strong { display: block; font-size: 1.1rem; margin-bottom: 3px; }
+.item-info p { margin: 0; font-size: 0.9rem; color: var(--text-secondary); }
+
+.notification-dot {
+    width: 12px; height: 12px; background-color: #ff4458; border-radius: 50%; box-shadow: 0 0 8px rgba(255, 68, 88, 0.6);
+}
+
+/* ================= PERFIL EXPANDIDO ================= */
+.profile-details {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 70%;
+    background: var(--bg-sidebar); border-radius: 20px 20px 0 0; padding: 30px 20px;
+    transform: translateY(100%); transition: transform 0.3s ease-in-out;
+    z-index: 10; overflow-y: auto; text-align: left;
+}
+.profile-card.expanded .profile-details {
+    transform: translateY(0);
+}
+.profile-card.expanded .profile-info, 
+.profile-card.expanded .actions {
+    opacity: 0; pointer-events: none; 
+}
+
+#btn-close-details {
+    position: absolute; top: 15px; right: 15px; background: #333; border: none; color: white; border-radius: 50%; width: 35px; height: 35px; cursor: pointer;
+}
+
 /* ============================================================
    REGRAS DE RESPONSIVIDADE (MEDIA QUERIES)
    ============================================================ */
 
-/* Para Tablets e Telas Médias */
 @media (max-width: 768px) {
     .sidebar {
-        max-width: 80px; /* Reduz a barra lateral apenas para ícones */
+        max-width: 80px;
     }
     .sidebar-content, .nav-tab, .sidebar-header h1 {
-        display: none; /* Esconde textos para ganhar espaço lateral */
+        display: none; 
     }
 }
 
-/* Para Celulares (Telas pequenas) */
 @media (max-width: 480px) {
     .app-container {
-        flex-direction: column; /* Empilha a barra lateral e o card */
+        flex-direction: column; 
     }
 
     .sidebar {
         max-width: 100%;
-        height: 60px; /* Transforma a sidebar em uma barra superior */
+        height: 60px; 
         flex-direction: row;
         border-right: none;
         border-bottom: 1px solid #222;
@@ -254,13 +339,13 @@ kbd {
         background: var(--bg-sidebar);
     }
 
-    /* Esconde elementos que ocupam muito espaço no celular */
+  
     .sidebar-tabs, .sidebar-content, .shortcuts-bar {
         display: none; 
     }
 
     .profile-card {
-        height: 55vh; /* Ajusta a altura do card para caber no celular */
+        height: 55vh; 
     }
 
     .action-btn.large { width: 55px; height: 55px; }
