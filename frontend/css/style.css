@@ -6,14 +6,12 @@
     --text-secondary: #ffffff; 
     --gradient-primary: linear-gradient(90deg, #292dfd 0%, #5bd9ff 100%);
     
-    /* Cores das ações */
     --color-pass: #fd2945;
     --color-like: #1be4a1;
     --color-super: #2db1ff;
     --color-rewind: #ffffff;
     --color-boost: #ff5e00;
     
-    /* Foco acessível com a cor da marca */
     --focus-ring: #21cbff; 
 }
 
@@ -32,7 +30,6 @@ body {
 }
 
 body {
-    /* Seta Branca com Borda Preta */
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24"><path fill="white" stroke="black" stroke-width="1.5" d="M7 2l12 11.2-5.8.5 3.3 7.3-2.2 1-3.2-7.4-4.4 4.8z"/></svg>'), auto;
 }
 
@@ -127,19 +124,16 @@ button:focus, article:focus {
     transition: opacity 0.2s;
 }
 
-/* Matches: Fundo Vermelho, Texto Branco */
 .nav-tab:first-child {
     background-color: #ff0000;
     color: #ffffff;
 }
 
-/* Mensagens: Fundo Azul, Texto Branco */
 .nav-tab:last-child {
-    background-color: #ffffff; /* Azul da sua paleta original */
+    background-color: #ffffff; 
     color: #000000;
 }
 
-/* Efeito para quando a aba NÃO está ativa (opacidade menor para diferenciar) */
 .nav-tab:not(.active) {
     opacity: 0.6;
 }
@@ -264,7 +258,7 @@ button:focus, article:focus {
 
 #btn-undo { 
     background-color: var(--color-rewind) !important; 
-    color: #000000 !important; /* Texto preto para contraste no fundo branco */
+    color: #000000 !important; 
 }
 
 .btn-boost { 
